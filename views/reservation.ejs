@@ -1,0 +1,45 @@
+<% include ("../controllers/reservation.js")%>
+<html>
+    <head>
+        <title>Reservation - EcamAir</title>
+    </head>
+    
+    <body>
+        <h1>Reservation</h1>
+        <div>
+            <form action = "/passengers" method = "get" name="reservation">
+                <table>
+                    <tr>
+                        <td>Destination :</td>
+                        <td><input type = "text" name="destination" id="destination"></td>
+                    </tr>
+                    <tr>
+                        <td>Nombre de place :</td>
+                        <td><input type = "text" name = "nbrPlace" id = "nbrPlace"></td>
+                    </tr>
+                    <tr>
+                        <td>Assurance :</td>
+                        <td><input type = "checkbox" name="assurance" id="assurance"></td>
+                    </tr>
+                    <tr>
+                        
+                        <td><button type="submit" name="btnReservation">Etape suivante</button></td>
+                        
+                    </tr>
+                </table>
+                <button type="submit" name="prix" formaction="/calculer">Calculer le total</button>
+            </form >
+            <form action = "/calculer" method = "get">
+                <% if (prixTot !== undefined) { %>
+                    <br><label id="prix"> le prix total est:  <%= prixTot %></label>
+                <% } %>
+            </form>
+            
+
+
+
+        </div>
+        
+    </body>
+    
+</html>

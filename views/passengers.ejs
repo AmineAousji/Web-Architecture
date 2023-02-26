@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>Encodage des voyageurs</title>
+    </head>
+    
+    <body>
+        <h1>Encodage des voyageurs</h1>
+            <form action="/addcoordinates" method = "get">
+                <% for (var i = 0; i < reservation.nbrPlaces ; i++ ){ %>
+                    <table>
+                        <tr>
+                            <td>Nom </td>
+                            <td><input type = "text" name = "name" id="name"></td>
+                        </tr>
+                        <tr>
+                            <td>Age </td>
+                            <td><input type = "number" name = "age" id="age"></td>
+                        </tr>
+                    </table>
+                <% }  %>
+                
+                <br>
+                <button type="submit" name="submit">Etape suivante</button>
+                <input type="submit" value="Annuler la reservation" >
+            </form>
+    </body>
+    
+</html>

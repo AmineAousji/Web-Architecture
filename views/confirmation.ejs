@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Validation des réservations</title>
+</head>
+<body>
+  <h1>Validation des réservations</h1>
+  <p>Destination : <%= reservations.destination  %></p>
+  <p>Assurance : <%= reservations.assurance %></p>
+  <p>Prix : <%= reservations.prix %></p>
+  <p>Liste des passagers :</p>
+  <ul>
+    <% for(let i = 0; i < nbrPlaces; i++) { %>
+      <li><%= passenger.name[i] %> => <%= passenger.age[i] %> years</li>
+    <% } %>
+  </ul> 
+  <form action="/notification" method="post">
+    <input type="submit" value="Etape suivante">
+    <input type="submit" value="Annuler la réservation" formaction="/annuler">
+  </form>
+</body>
+</html>
