@@ -1,8 +1,9 @@
 class Reservation{
-    constructor(destination, nbrPlaces, assurance){
+    constructor(destination, nbrPlaces, assurance,passenger){
         this.destination = destination;
         this.nbrPlaces = nbrPlaces;
         this.assurance = assurance;
+        this.passenger = passenger;
         
     }
     

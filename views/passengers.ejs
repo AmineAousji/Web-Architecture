@@ -1,10 +1,12 @@
 <html>
     <head>
+        <link href="style.css" rel="stylesheet" type="text/css">
         <title>Encodage des voyageurs</title>
     </head>
     
     <body>
-        <h1>Encodage des voyageurs</h1>
+        <div class="content">
+            <h1>Encodage des voyageurs</h1>
             <form action="/addcoordinates" method = "get">
                 <% for (var i = 0; i < reservation.nbrPlaces ; i++ ){ %>
                     <table>
@@ -22,7 +24,8 @@
                 <br>
                 <button type="submit" name="submit">Etape suivante</button>
                 <input type="submit" value="Annuler la reservation" >
-            </form>
+                </form>
+        </div>
     </body>
     
 </html>

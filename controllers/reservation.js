@@ -18,7 +18,7 @@ exports.createReservation = function(req, res){
         assurance = "reservation assuré";
     }
     
-    reservation = new Reservation(destination, nbrPlaces, assurance);
+    reservation = new Reservation(destination, nbrPlaces, assurance,[]);
     prix = reservation.Prix();
     reservation.prix = reservation.Prix()
     req.session.reser = reservation;

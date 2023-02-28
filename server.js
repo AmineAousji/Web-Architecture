@@ -10,6 +10,7 @@ app.use(session({
   resave: false,
   saveUninitialized: true
 }));
+app.use(express.static(__dirname + '/public'));
 
 app.set('view engine', 'ejs');
 let routes = require('./routes/route')
